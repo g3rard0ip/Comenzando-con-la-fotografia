@@ -1,9 +1,19 @@
+body{
+  font-family: Dancing Script;
+  max-width: 900px;
+}
 header{
   background-color: #5b7989;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
   display: flex;
   flex-direction: row;
+  animation: animacionHeader 1.5s;
+}
+@-webkit-keyframes animacionHeader{
+  0%{margin-top: 150%;}
+  60%{margin-top: -5%;}
+  100%{margin-top: 0%;}
 }
 #titulo{
   text-align: left;
@@ -17,16 +27,16 @@ header{
   text-align: right;
 }
 .link1{
-  margin: 20px;
+  margin: 10px;
   text-decoration: none;
   color: white;
 }
 .link2{
-  margin: 20px;
+  margin: 10px;
   color: white;
 }
 .link3{
-  margin: 20px;
+  margin: 10px;
   color: white;
 }
 #imagencentral{
@@ -37,6 +47,41 @@ header{
   width: 80%;
   margin: 2%;
 }
+#imagenesSecundarias{
+  display: flex;
+  background-color: #d5c75f;
+}
+#imagenesSecundarias img{
+  width: 50%;
+}
+.imagensecundaria1{
+  margin: 5%;
+  border: 2px solid black;
+  box-shadow: #82c3a6;
+  transition-duration: 0.5s;
+}
+.imagensecundaria2{
+  margin: 5%;
+  border: 2px solid black;
+  box-shadow: #82c3a6;
+  transition-duration: 0.5s;
+}
+.imagensecundaria1:hover{
+  transform: rotate(10deg);
+}
+.imagensecundaria2:hover{
+  transform: translate(20px, -5px);
+}
+footer{
+  display: flex;
+  background-color: #C6d5c5;
+  border-radius: 8px;
+}
+footer div{
+  width: 25%;
+  text-align: center;
+}
+
 @media (max-width:650px){
   header #titulo{
     width: 100%;
@@ -48,10 +93,25 @@ header{
   }
   header #links{
     text-align: center;
-    width: 100%;
+    width: 70%;
+    margin: 0 auto;
+    }
+  #imagenesSecundarias{
+    display: flex;
+    flex-direction: column;
+    border: 1px;
   }
-  header nav{
-    width: 100%;
+  #imagenesSecundarias img{
+    width: 80%;
+    height: 150px;
     text-align: center;
+    margin-left: 10%;
   }
-}
+  footer{
+    display: flex;
+    flex-direction: column;
+  }
+  footer div{
+    width: 100%;
+  }
+  }
